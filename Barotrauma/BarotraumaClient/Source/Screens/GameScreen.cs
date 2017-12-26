@@ -238,7 +238,8 @@ namespace Barotrauma
 				                 Color.Lerp(GameMain.LightManager.AmbientLight * 0.5f, Color.Red, r));
 				spriteBatch.End();
                 Hull.renderer.waterEffect.CurrentTechnique = Hull.renderer.waterEffect.Techniques["LosShader"];
-                Hull.renderer.waterEffect.Parameters["xLosTexture"].SetValue(GameMain.LightManager.losTexture);
+                Hull.renderer.waterEffect.Parameters["yLosTexture"].SetValue(GameMain.LightManager.lightMap);
+                Hull.renderer.waterEffect.Parameters["yTexture"].SetValue(GameMain.LightManager.losTexture);
                 spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, null, Hull.renderer.waterEffect, null);
             }
 			spriteBatch.Draw(renderTargetFinal, new Rectangle(0, 0, GameMain.GraphicsWidth, GameMain.GraphicsHeight), Color.White);
