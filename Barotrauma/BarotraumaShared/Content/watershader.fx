@@ -50,7 +50,7 @@ float4 main2(float4 position : SV_Position, float4 color : COLOR0, float2 texCoo
 	float4 losColor = tex2D(LosSampler, texCoord);
     float4 sample = tex2D(TextureSampler, texCoord);
 	
-	float4 outColor = float4(sample.x, sample.y, sample.z, losColor.x);
+	float4 outColor = float4(sample.x*losColor.x, sample.y*losColor.x, sample.z*losColor.x, losColor.x);
 		
     return outColor;
 }

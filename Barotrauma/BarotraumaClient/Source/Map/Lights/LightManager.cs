@@ -71,7 +71,7 @@ namespace Barotrauma.Lights
                        pp.BackBufferFormat, pp.DepthStencilFormat, pp.MultiSampleCount,
                        RenderTargetUsage.DiscardContents);
 
-            losTexture = new RenderTarget2D(graphics, (int)(GameMain.GraphicsWidth*lightmapScale), (int)(GameMain.GraphicsHeight*lightmapScale), false, SurfaceFormat.Alpha8, DepthFormat.None);
+            losTexture = new RenderTarget2D(graphics, (int)(GameMain.GraphicsWidth*lightmapScale), (int)(GameMain.GraphicsHeight*lightmapScale), false, SurfaceFormat.Color, DepthFormat.None);
 
             losSource = new LightSource(Vector2.Zero, GameMain.GraphicsWidth, Color.White, null, false);
             losSource.texture = new Texture2D(graphics, 1, 1);

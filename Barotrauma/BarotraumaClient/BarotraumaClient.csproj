@@ -234,6 +234,7 @@
     <Reference Condition="$(DefineConstants.Contains('WINDOWS'))" Include="MonoGame.Framework.WindowsDX">
       <HintPath>..\..\Libraries\NuGet\MonoGame.Framework.WindowsDX.3.6.0.1625\lib\net40\MonoGame.Framework.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Condition="$(DefineConstants.Contains('WINDOWS'))" Include="SharpDX, Version=2.6.3.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Libraries\NuGet\MonoGame.Framework.WindowsDX.3.6.0.1625\lib\net40\SharpDX.dll</HintPath>
